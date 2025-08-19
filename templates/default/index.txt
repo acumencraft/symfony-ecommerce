@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code>/var/www/html/src/Controller/DefaultController.php</code></li>
+        <li>Your template at <code>/var/www/html/templates/default/index.html.twig</code></li>
+    </ul>
+</div>
+{% endblock %}
+
+---------------------------------------------------------------------------------
+
+{# {% extends 'base.html.twig' %}
+
+{% block title %}
+  Welcome to our Store!
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1 class="mt-4">Welcome to our E-commerce Site!</h1>
+
+    {# --- გამორჩეული პროდუქტების სექცია --- #}
+    <h2 class="mt-5">Featured Products</h2>
+
+    {# ვამოწმებთ, ცარიელი ხომ არ არის მასივი #}
+    {% if featured_products is not empty %}
+      <div class="row">
+        {# ვიწყებთ ციკლს featured_products მასივზე #}
+        {% for product in featured_products %}
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              {# აქ შეგვიძლია სურათის დამატება მომავალში #}
+              {# <img src="..." class="card-img-top" alt="{{ product.name }}"> #}
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">SKU: {{ product.sku }}</p>
+                <p class="card-text">
+                  <strong>Price: €{{ product.price|number_format(2, '.', ',') }}</strong>
+                </p>
+                <a href="#" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No featured products available at the moment.</p>
+    {% endif %}
+
+    <hr class="my-5" />
+
+    {# --- ელექტრონიკის კატეგორიის პროდუქტების სექცია --- #}
+    <h2 class="mt-5">Electronics</h2>
+    {% if electronic_products is not empty %}
+      <ul>
+        {% for product in electronic_products %}
+          <li>{{ product.name }} - €{{ product.price }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No products found in the electronics category.</p>
+    {% endif %}
+  </div>
+{% endblock %} #}
