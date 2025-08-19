@@ -25,28 +25,19 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
-### Composer ###
-/vendor/
-/composer.lock
-/web/bundles/
-/bin/
-
-### Symfony ###
-/var/
-/public/build/
-/public/uploads/
-
-### Project-specific ###
-/node_modules/
-/yarn-error.log
-.env.local
-.env.local.*
-.phpstorm.meta.php
+### Project specific ###
+# IDE-specific files
 .idea/
 .vscode/
+.phpstorm.meta.php
+*.code-workspace
+.ddev/
 
-### Logs ###
+# Project-specific files
+.env
+.env*
 *.log
+reset.md
 
 ### OS-specific ###
 .DS_Store
